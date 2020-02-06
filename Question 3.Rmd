@@ -1,0 +1,29 @@
+#Question 3:  
+
+#Joseph and Muhammed often travel to Ryerson University from their job in Mississauga. Muhammed tends to drive from the highway, so his arrival to the University has a Normal distribution with a mean of 30 minutes and a standard deviation 3 minutes. Joseph tends to prefer side roads so he sometimes get stuck behind school buses but makes up for the lost time by driving faster. His arrival time has a normal distribution with a mean of 27 minutes with a standard deviation of 7 minutes. Their travel times are independent from each other. 
+ 
+#1. On Joseph's probability distribution curve, find the height of the curve, in case arriving in 28.5 minutes.  i. Recommended function: dnorm() ii. Does this figure mean anything? 
+
+dnorm(28.5, mean=27, sd= 7)
+
+#2. How does Joseph's arrival time distribution look like, plot the period from 15 to 45 minutes?  i. Recommended function: using dnorm() and curve() together  ii. Alternative: plot() function [Ask the TAs for assistance]. 
+
+# split.screen( figs = c( 1, 1 ) ) 
+curve(dnorm(x, mean=30, sd= 3), from=15, to=45)
+# Alternative
+x <- 10:50
+plot(x,dnorm(x, mean=30, sd= 3),type="h")
+
+#3. Create a normally distributed sample set for Joseph with a size of 200. Plot a histogram for this dataset.  i. Recommended functions: hist(), rnorm() ii. Use the set.seed(25) function if you want to replicate your results. (You can use any integer)      Hint(check break argument) 
+
+set.seed(25)
+hist(rnorm(200, 27,7), breaks = 15)
+
+#4. Find Muhammed's arrival time corresponding to the 80th percentile i.e (what is the time of arrival corresponding to 80% of times).  i. Recommended function: qnorm() 
+
+qnorm(0.8, mean =27, sd = 7)
+# 80% of the values in the distribution are LESS then this value
+
+#5. Find the probability that Joseph arrives to the University in 20 minutes or less. i. Recommended investigate the pnorm() ii. Using the same pnorm() function, find the probability that Joseph arrives to the University in 1 or less  minutes, 5 or less minutes, 10 or less minutes, 15 or less minutes.         (Notice values of probability increase as we head towards the mean)
+
+pnorm(20, mean = 27, sd = 7)
