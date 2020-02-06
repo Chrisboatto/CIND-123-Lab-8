@@ -1,0 +1,22 @@
+Question 1: 
+ 
+#1. Generate a sample of size 100 from a standard normal distribution and save it in A. Recommended function: rnorm() 
+
+A=rnorm(100)
+
+#2. Estimate mean and standard deviation of A. 
+
+mean(A)
+sd(A)
+
+#3. Draw a sample of size 100 from a normal distribution with mean 2 and standard deviation 5 and save it in B. 
+
+B <- rnorm(100, 2, 5)
+#4. Estimate mean and standard deviation of B. 
+
+mean(B)
+sd(B)
+
+#5. Find the height of the normal distribution for 1.96. Recommended function: dnorm() 
+ 
+dnorm(1.96)

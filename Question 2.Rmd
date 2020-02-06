@@ -1,0 +1,5 @@
+#Question 2:  
+
+#Assume that the test scores of a college entrance exam fits a normal distribution. Furthermore, the mean test score is 62, and the standard deviation is 14.2. What is the percentage of students scoring 86 or more in the exam? 
+
+pnorm(86, mean=62, sd=14.2, lower.tail=FALSE) 
